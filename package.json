@@ -1,0 +1,28 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "Jack Henry's Blog",
+    "main": "index.js",
+    "repository": "www.github.com/jackhenry/blog",
+    "author": "Jack Henry",
+    "license": "MIT",
+    "scripts": {
+        "docs": "rm -r ./docs && cp -r ./public ./docs",
+        "build": "webpack --config webpack.config.js --mode production && yarn docs",
+        "dev": "webpack serve --mode development --config webpack.config.js"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^6.4.0",
+        "handlebars": "^4.7.7",
+        "js-yaml": "^4.1.0",
+        "marked": "^3.0.7",
+        "moment": "^2.29.1",
+        "style-loader": "^3.3.0",
+        "webpack": "^5.58.1",
+        "webpack-cli": "^4.9.0",
+        "webpack-dev-server": "^4.3.1"
+    }
+}
