@@ -65,6 +65,21 @@ a:hover {
 
 #post-entry {
     margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+#post-entry>* {
+    place-self: start;
+}
+
+@media screen and (min-width: 480px) {
+    #post-entry>* {
+        place-self: normal;
+    }
+    #post-entry {
+        display: block;
+    }
 }
 
 #post-date {
