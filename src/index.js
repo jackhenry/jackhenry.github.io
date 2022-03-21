@@ -1,4 +1,5 @@
 import posts from './posts';
+import projects from './projects';
 
 const postContainer = document.getElementById('posts');
 
@@ -19,3 +20,7 @@ posts.forEach((post) => {
   postEntry.appendChild(postTitleElement);
   postContainer.appendChild(postEntry);
 });
+
+// Inject projects under projects div
+const projectContainer = document.getElementById('projects');
+projectContainer.innerHTML += projects.reduce((prev, curr) => prev + curr, '');

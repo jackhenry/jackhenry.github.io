@@ -1,0 +1,30 @@
+<div id="project-entry">
+  <div id="project-entry-line">
+    <span id="label">name:</span>
+    <span>
+      {{ project.name }} 
+    </span>
+    {{#if project.inProgress}}
+      <span id="in-progress">IN PROGRESS</span>
+    {{/if}}
+  </div>
+  <div id="project-entry-line">
+    <span id="label">urls:</span>
+    <span class="multiple-links">
+      <a href={{project.repo}}>repo</a>
+      {{#if project.demo}}
+        <a href={{project.demo}}>demo</a>
+      {{/if}}
+    </span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">description:</span>
+    <span>{{project.description}}</span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">tools:</span>
+    {{#each project.tools}}
+      <span>{{this}}</span>
+    {{/each}}
+  </div>
+</div>

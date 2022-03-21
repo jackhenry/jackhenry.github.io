@@ -4,9 +4,13 @@ const marked = require('marked');
 const moment = require('moment');
 const handlebars = require('handlebars');
 
+const CONTENT_BASE = './src/content'
+const POSTS_DIR = `${CONTENT_BASE}/posts`
+const PROJECTS_YAML_PATH = `${CONTENT_BASE}/projects.yaml`;
+
 async function fetchMarkdownFiles() {
-    const mdFileNames = await readdir('./src/content/');
-    const fetchAllFileContents = await mdFileNames.map(async(filename) => await readFile(`./src/content/${filename}`, {
+    const mdFileNames = await readdir(POSTS_DIR);
+    const fetchAllFileContents = await mdFileNames.map(async(filename) => await readFile(`${POSTS_DIR}/${filename}`, {
         encoding: 'utf-8',
     }));
     const fileContents = await Promise.all(fetchAllFileContents);
@@ -87,4 +91,25 @@ async function embedContent(data) {
   await writeFile('./src/posts.js', `${HEADER_COMMENT}\n\n${content}`);
 }
 
+async function embedProjects() {
+    const projectsYamlString = await readFile(PROJECTS_YAML_PATH, 'utf-8');
+    const source = await readFile('./templates/project.html', 'utf-8');
+    const template = handlebars.compile(source);
+
+    const projectsYamlObj = yaml.load(projectsYamlString);
+    if (!('projects' in projectsYamlObj)) throw new Error('Invalid yaml');
+    const htmlStrings = projectsYamlObj.projects.map(project => template({ project }));
+    
+    // Create an array of strings and save it as projects.js in source
+    let js = HEADER_COMMENT + "\n\n";
+    js += `export default [\n`
+    htmlStrings.forEach(str => {
+        js += `\`${str}\`,\n`;
+    });
+    js += ']';
+    
+    await writeFile('./src/projects.js', js); 
+}
+
 createHtmlFiles();
+embedProjects();
