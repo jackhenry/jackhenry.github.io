@@ -1,7 +1,7 @@
 projects:
   - name: arna
     repo: https://github.com/jackhenry/arna.git
-    demo: https://jackhenry.github.io/arna
+    demo: https://jackhenry.io/arna
     inProgress: false
     tools: [typescript, svelte+vite, chevrotain]
     description: > 
@@ -19,15 +19,15 @@ projects:
 
   - name: ESP-32 Chip-8 Emulator
     repo: https://github.com/jackhenry/esp32-chip-8.git
-    tools: [C, ESP-IDF]
+    tools: [c, esp-idf]
     inProgress: true
     description: > 
       Chip-8 emulator cross compiled to run on ESP-32
       embedded architecture.
   
-  - name: jackhenry.github.io
+  - name: jackhenry.io
     repo: https://github.com/jackhenry/jackhenry.github.io.git
-    demo: https://jackhenry.github.io/
+    demo: https://jackhenry.io/
     inProgress: false
     tools: [javascript, webpack, node]
     description: > 
