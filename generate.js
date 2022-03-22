@@ -59,9 +59,10 @@ async function createHtmlFiles() {
     const data = await parseMarkdownFiles();
     const htmlList = data.map((obj) => template({ post: obj }));
 
-    for (let index = 0; index < data.length; index++) {
-        const html = htmlList[index];
-        const htmlFilePath = `posts/post${index}.html`;
+    for (const [index, obj] of data.entries()) {
+        const html = template({ post: obj });
+        const htmlFilePath = `posts/${obj.filename}.html`;
+        console.log(htmlFilePath)
         await writeFile(`./public/${htmlFilePath}`, html);
         // Update data object with path to the created html file
         data[index].path = `./${htmlFilePath}`;
