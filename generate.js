@@ -84,6 +84,7 @@ async function embedContent(data) {
             author: '${content.author}',
             title: '${content.title}',
             path: '${content.path}',
+            pin: ${content?.pin || false},
         }`);
     const content = `export default [
     ${objects.map((jsobj) => `${jsobj}`)}
