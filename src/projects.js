@@ -15,7 +15,7 @@ export default [
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/arna.git>repo</a>
-        <a href=https://jackhenry.io/arna>demo</a>
+        <a href=https://www.jackhenry.io/arna>demo</a>
     </span>
   </div>
   <div id="project-entry-line">
