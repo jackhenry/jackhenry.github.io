@@ -1,5 +1,6 @@
 ---
-title: менің күнім 
+title: менің күнім
+filename: arna 
 date: 2022-03-20T00:17:44
 author: мырзам 
 ---
