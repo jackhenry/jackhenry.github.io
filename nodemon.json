@@ -1,0 +1,15 @@
+{
+  "watch": [
+    "src",
+    "generate.js",
+    "public"
+  ],
+  "ignore": [
+    "src/posts.js",
+    "src/projects.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,yaml,md"
+}

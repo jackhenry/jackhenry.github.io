@@ -24,6 +24,10 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {
@@ -33,7 +37,8 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'public'),
     },
-    hot: true,
+    hot: false,
+    liveReload: true,
     compress: true,
     port: 9000,
   },
