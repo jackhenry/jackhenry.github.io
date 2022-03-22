@@ -1,7 +1,7 @@
 projects:
   - name: arna
     repo: https://github.com/jackhenry/arna.git
-    demo: https://jackhenry.io/arna
+    demo: https://www.jackhenry.io/arna
     inProgress: false
     tools: [typescript, svelte+vite, chevrotain]
     description: > 
