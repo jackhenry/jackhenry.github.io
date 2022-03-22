@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <title>about me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/post.css" />
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/ir-black.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</head>
+
+<body>
+    <script>
+        0
+    </script>
+    <div id="content">
+        <div id="head">
+            <span id="title">about me</span>
+            <a href="/" id="home-redirect">$HOME</a>
+        </div>
+        <div id="subhead">
+            <span id="author">Jack Henry</span>
+            <span id="date">2022-03-20</span>
+        </div>
+        <div id="markdown-container">
+            <h2 id="who-am-i">Who am I?</h2>
+<p>My name is Jack Henry.</p>
+<p>I live in St. Paul, Minnesota. I was born and raised in Minnesota, but moved to Ojai, California during my sophomore year of high school.</p>
+<p>After graduating high school, I lived in San Francisco, CA for about 4 years. I eventually moved back to St. Paul, MN.</p>
+<p>I have a cat named <a id="malone-label">Malone</a>.</p>
+<img id="malone-img" src="../assets/img/malone.gif" alt="malone" style="display: none; margin-left: auto; margin-right: auto;"/>
+
+
+<p>I enjoy baking <a id="bread-label">bread</a>. I&#39;m interested in foreign languages and travel. My favorite animal is the capybara.</p>
+<img id="bread-img" src="../assets/img/bread.webp" alt="bread" style="display: none; margin-left: auto; margin-right: auto;"/>
+
+<h2 id="programming">Programming</h2>
+<p>I&#39;ve been passionate about computer science since I was 16. At the time, I bought a book titled &quot;C++ for Dummies&quot; and taught myself to program. It was a grueling experience. Yet, immensely rewarding.</p>
+<p>I decided that I wanted to study computer science in college. In December of 2021, I received a B.S. in Computer Science from Metropolitan State University.</p>
+<h2 id="current-work">Current Work</h2>
+<p>As a fresh college grad, I am currently looking for a software development position. You can view a curated list of my public projects <a href="/#projects">here</a>.</p>
+<p>I have frontend development exprience using <em>Javascript</em> and <em>Typescript</em>. The frameworks I am most familiar with are <em>React</em> and <em>Svelte</em>. </p>
+<p>Additionally, I&#39;ve developed backend services using <em>Express</em>, <em>NestJS</em>, <em>Flask</em>, and <em>Spring</em>. I&#39;ve created REST and <em>GraphQL</em> APIs.</p>
+<p>If you know of an open position and think I may be a good fit, please <a href="mailto:jack@jackhenry.io">contact me</a></p>
+<h2 id="areas-of-interest">Areas of Interest</h2>
+<p>Throughout my studies and personal endeavors, I&#39;ve dabbled in a broad range of topics in computer science/programming. 
+The following is a list of topics I think are neat:</p>
+<ul>
+<li>Lexing and parsing</li>
+<li>NTP and time synchronization</li>
+<li>Transpilation</li>
+<li>Virtual DOM</li>
+<li>Alternative version control systems</li>
+<li>Emulation</li>
+<li>Graph layout algorithms</li>
+<li>Non-relational database systems</li>
+</ul>
+<script>
+  const registerClickHandler = (label, img) => {
+    let show = false;
+    label.addEventListener('click', () => {
+      show = !show;
+      if (show) {
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
+    });
+  }
+
+  const maloneLabel = document.getElementById('malone-label');
+  const maloneImage = document.getElementById('malone-img');
+  const breadLabel = document.getElementById('bread-label');
+  const breadImage = document.getElementById('bread-img');
+  
+  registerClickHandler(maloneLabel, maloneImage);
+  registerClickHandler(breadLabel, breadImage);
+  
+</script>
+        </div>
+        <footer>
+            <span id="copyright">copyright &copy 2022 Jack Henry (мырзам)</span>
+            <span id="final-message">From viewers like you. Thank you.</span>
+        </footer>
+    </div>
+</body>
+
+</html>

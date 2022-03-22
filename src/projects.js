@@ -15,7 +15,7 @@ export default [
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/arna.git>repo</a>
-        <a href=https://jackhenry.github.io/arna>demo</a>
+        <a href=https://jackhenry.io/arna>demo</a>
     </span>
   </div>
   <div id="project-entry-line">
@@ -25,9 +25,9 @@ export default [
   </div>
   <div id="project-entry-line">
     <span id="label">tools:</span>
-      <span>typescript</span>
-      <span>svelte+vite</span>
-      <span>chevrotain</span>
+      <span class="tool-name">typescript</span>
+      <span class="tool-name">svelte+vite</span>
+      <span class="tool-name">chevrotain</span>
   </div>
 </div>`,
 `<div id="project-entry">
@@ -36,7 +36,7 @@ export default [
     <span>
       rustntp 
     </span>
-      <span id="in-progress">IN PROGRESS</span>
+      <span id="in-progress">in progress</span>
   </div>
   <div id="project-entry-line">
     <span id="label">urls:</span>
@@ -51,9 +51,9 @@ export default [
   </div>
   <div id="project-entry-line">
     <span id="label">tools:</span>
-      <span>rust</span>
-      <span>tokio</span>
-      <span>rustls</span>
+      <span class="tool-name">rust</span>
+      <span class="tool-name">tokio</span>
+      <span class="tool-name">rustls</span>
   </div>
 </div>`,
 `<div id="project-entry">
@@ -62,7 +62,7 @@ export default [
     <span>
       ESP-32 Chip-8 Emulator 
     </span>
-      <span id="in-progress">IN PROGRESS</span>
+      <span id="in-progress">in progress</span>
   </div>
   <div id="project-entry-line">
     <span id="label">urls:</span>
@@ -77,22 +77,22 @@ export default [
   </div>
   <div id="project-entry-line">
     <span id="label">tools:</span>
-      <span>C</span>
-      <span>ESP-IDF</span>
+      <span class="tool-name">c</span>
+      <span class="tool-name">esp-idf</span>
   </div>
 </div>`,
 `<div id="project-entry">
   <div id="project-entry-line">
     <span id="label">name:</span>
     <span>
-      jackhenry.github.io 
+      jackhenry.io 
     </span>
   </div>
   <div id="project-entry-line">
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/jackhenry.github.io.git>repo</a>
-        <a href=https://jackhenry.github.io/>demo</a>
+        <a href=https://jackhenry.io/>demo</a>
     </span>
   </div>
   <div id="project-entry-line">
@@ -103,9 +103,9 @@ export default [
   </div>
   <div id="project-entry-line">
     <span id="label">tools:</span>
-      <span>javascript</span>
-      <span>webpack</span>
-      <span>node</span>
+      <span class="tool-name">javascript</span>
+      <span class="tool-name">webpack</span>
+      <span class="tool-name">node</span>
   </div>
 </div>`,
 ]

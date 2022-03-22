@@ -1,57 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
-:root {
-    --main-fg-values: 201, 202, 204;
-    --main-bg-color: rgb(29, 31, 33);
-    --main-fg-color: rgb(var(--main-fg-values));
-    --secondary-fg-color: rgb(43, 188, 138);
-    --code-bg-color: rgb(41, 42, 45);
-    --link-hover-color: rgb(212, 128, 170);
-    --error-color: var(--link-hover-color);
-    --fg-muted: #666;
+@import url('shared.css');
+
+#logo {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 2px;
+    align-self: center;
+    animation: spin 4s linear infinite;
+    --webkit-animation: spin 4s linear infinite;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
+@-webkit-keyframes spin {
+    to {
+        transform:rotate(360deg)
+    }
 }
 
-html {
-    border-top: 2px solid var(--secondary-fg-color);
-}
-
-body {
-    max-width: 48rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    line-height: 1.725;
-    font-family: 'JetBrains Mono', monospace;
-    background-color: var(--main-bg-color);
-    color: var(--main-fg-color);
-}
-
-a {
-    color: var(--main-fg-color);
-    text-decoration: none;
-    background-image: linear-gradient(transparent, transparent 5px, var(--main-fg-color) 5px, var(--main-fg-color));
-    background-position: bottom;
-    background-size: 100% 6px;
-    background-repeat: repeat-x;
-}
-
-a:hover {
-    background-image: linear-gradient(transparent, transparent 4px, var(--link-hover-color) 4px, var(--link-hover-color));
-}
-
-#content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    overflow-wrap: break-word;
-    padding-top: 4rem;
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #head {
@@ -63,31 +31,64 @@ a:hover {
     text-align: center;
 }
 
-#post-entry {
+#regular-posts > #post-entry {
     margin-bottom: 6px;
     display: flex;
     flex-direction: column;
 }
 
-#post-entry>* {
+#pinned-posts {
+    margin-bottom: 28px;
+    margin-left: -4px;
+}
+
+#pinned-posts > #post-entry {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#pinned-posts > #post-entry {
+    align-items: center;
+    padding-bottom: 6px;
+}
+
+#pinned-posts > #post-entry > .post-date {
+    min-width: 0px;
+    margin-right: 2px;
+}
+
+#regular-posts > #post-entry>* {
     place-self: start;
+}
+
+#pin-svg {
+    padding-top: 2px;
+    height: 22px;
+    width: 22px;
 }
 
 @media screen and (min-width: 480px) {
     #post-entry>* {
-        place-self: normal;
+        place-self: initial;
     }
-    #post-entry {
-        display: block;
+    #regular-posts > #post-entry {
+        flex-direction: row;
+        align-items: center;
+    }
+    .post-date {
+        min-width: 100px;
     }
 }
 
-#post-date {
+.post-date {
     color: var(--fg-muted);
     font-size: 16px;
     margin-right: 16px;
-    min-width: 100px;
+    min-width: 0px;
     text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
 }
 
 #project-entry {
@@ -136,45 +137,14 @@ a:hover {
 }
 
 #in-progress {
-    color: var(--error-color);
+    background-color: var(--error-color);
+    color: var(--main-bg-color);
+    border-radius: 2px;
+    font-weight: 700;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #post-title {
     font-size: 16px;
-}
-
-footer {
-    flex-grow: 1;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 48rem;
-    margin-top: 1.5rem;
-    color: var(--fg-muted);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-@media screen and (min-width: 640px) {
-    footer {
-        align-content: flex-end;
-        justify-content: space-between;
-        align-items: center;
-    }
-    footer>span {
-        margin-top: 4px;
-        text-align: unset;
-    }
-}
-
-#copyright {
-    align-self: flex-start;
-    text-align: center;
-}
-
-#final-message {
-    margin-top: 4px;
-    align-self: flex-end;
-    text-align: center;
 }
