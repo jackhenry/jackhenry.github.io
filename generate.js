@@ -57,17 +57,14 @@ async function createHtmlFiles() {
     const template = handlebars.compile(source);
 
     const data = await parseMarkdownFiles();
-    const htmlList = data.map((obj) => template({ post: obj }));
-
+    
     for (const [index, obj] of data.entries()) {
         const html = template({ post: obj });
         const htmlFilePath = `posts/${obj.filename}.html`;
         console.log(htmlFilePath)
         await writeFile(`./public/${htmlFilePath}`, html);
-        // Update data object with path to the created html file
         data[index].path = `./${htmlFilePath}`;
     }
-
     await embedContent(data);
     console.log('finished embedding post data');
 }
