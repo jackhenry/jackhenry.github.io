@@ -92,7 +92,7 @@ export default [
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/jackhenry.github.io.git>repo</a>
-        <a href=https://jackhenry.io/>demo</a>
+        <a href=https://www.jackhenry.io/>demo</a>
     </span>
   </div>
   <div id="project-entry-line">

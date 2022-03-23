@@ -27,7 +27,7 @@ projects:
   
   - name: jackhenry.io
     repo: https://github.com/jackhenry/jackhenry.github.io.git
-    demo: https://jackhenry.io/
+    demo: https://www.jackhenry.io/
     inProgress: false
     tools: [javascript, webpack, node]
     description: > 

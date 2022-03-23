@@ -17,11 +17,11 @@ pin: true
 </div>
 <div class="flex-align-center">
   <span class="material-icons mr-4">code</span>
-  <span>github.com/jackhenry</span>
+  <span>www.github.com/jackhenry</span>
 </div>
 <div class="flex-align-center">
   <span class="material-icons mr-4">language</span>
-  <span>jackhenry.io</span>
+  <span>www.jackhenry.io</span>
 </div>
 
 ## Education
@@ -37,9 +37,9 @@ A.S. Computer Science<br/>Century College<br/>Graduated August 2020</p>
 
 ## Projects
 ### arna
-_repo_: github.com/jackhenry/arna
+_repo_: www.github.com/jackhenry/arna
 
-_demo_: jackhenry.io/arna
+_demo_: www.jackhenry.io/arna
 
 _description_: A monorepo containing various packages for generating, modifying, and rendering force directed graphs.
 Includes an implementation of a custom DSL for defining graphs.
@@ -47,7 +47,7 @@ Includes an implementation of a custom DSL for defining graphs.
 _tools_: <span class="tools-list"><span>typescript</span> <span>svelte+vite</span> <span>chevrotain</span> <span>konvajs</span> <span>tailwindcss</span></span>
 
 ### rustntp
-_repo_: github.com/jackhenry/rustntp
+_repo_: www.github.com/jackhenry/rustntp
 
 _description_: Implementation of a Simple Network Time Protocol version 4 server and client in rust. The primary goal is to be
 compliant with RFC 4330.
@@ -55,9 +55,9 @@ compliant with RFC 4330.
 _tools_: <span class="tools-list"><span>rust</span> <span>tokio</span> <span>rustls</span></span>
 
 ### jackhenry.io
-_repo_: github.com/jackhenry/jackhenry.github.io
+_repo_: www.github.com/jackhenry/jackhenry.github.io
 
-_demo_: jackhenry.io
+_demo_: www.jackhenry.io
 
 _description_: My personal website. Purposefully built with vanilla javascript and to be bundled with no external dependencies. The repo contains node scripts for converting markdown files into html.
 
