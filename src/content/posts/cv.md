@@ -96,7 +96,7 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
 
 <script>
   document.write('<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">');
-  //document.getElementById('jack-henry-erickson-vanoss').innerHTML = 'Jack Henry';
+  document.getElementById('jack-henry-erickson-vanoss').innerHTML = 'Jack Henry';
   const secretMode = () => {
     const head  = document.getElementsByTagName('head')[0];
     const link  = document.createElement('link');
