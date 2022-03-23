@@ -7,46 +7,67 @@ pin: true
 ---
 
 # Jack Henry Erickson-Vanoss
-phone: 999-999-9999<br/>
-email: jack@jackhenry.io<br/>
-code: github.com/jackhenry<br />
-website: jackhenry.io
+<div class="flex-align-center">
+  <span class="material-icons mr-4">email</span>
+  <span>jack@jackhenry.io</span>
+</div>
+<div class="flex-align-center">
+  <span class="material-icons mr-4">smartphone</span>
+  <span>999-999-9999</span>
+</div>
+<div class="flex-align-center">
+  <span class="material-icons mr-4">code</span>
+  <span>github.com/jackhenry</span>
+</div>
+<div class="flex-align-center">
+  <span class="material-icons mr-4">language</span>
+  <span>jackhenry.io</span>
+</div>
 
 ## Education
-B.S. Computer Science<br/>Metropolitan State University<br/>2020 - 2021
+<div class="education-flex">
+<span id="school-icon" class="material-icons">navigate_next</span>
+B.S. Computer Science<br/>Metropolitan State University<br/>Graduated December 2021
+</div>
 
-<p id="as">A.S. Computer Science<br/>Century College<br/>2018 - 2020</p>
+<div id="as" class="education-flex">
+<span id="school-icon" class="material-icons">navigate_next</span>
+A.S. Computer Science<br/>Century College<br/>Graduated August 2020</p>
+</div>
 
 ## Projects
 ### arna
-repo: www.github.com/jackhenry/arna<br/>
-demo: www.jackhenry.io/arna<br/>
+_repo_: github.com/jackhenry/arna
 
-description: A monorepo containing various packages for generating, modifying, and rendering force directed graphs.
+_demo_: jackhenry.io/arna
+
+_description_: A monorepo containing various packages for generating, modifying, and rendering force directed graphs.
 Includes an implementation of a custom DSL for defining graphs.
 
-tools: typescript svelte+vite chevrotain konvajs tailwindcss
+_tools_: <span class="tools-list"><span>typescript</span> <span>svelte+vite</span> <span>chevrotain</span> <span>konvajs</span> <span>tailwindcss</span></span>
 
 ### rustntp
-repo: www.github.com/jackhenry/rustntp
+_repo_: github.com/jackhenry/rustntp
 
-description: Implementation of a Simple Network Time Protocol version 4 server and client in rust. The primary goal is to be
+_description_: Implementation of a Simple Network Time Protocol version 4 server and client in rust. The primary goal is to be
 compliant with RFC 4330.
 
-tools: rust tokio rustls
+_tools_: <span class="tools-list"><span>rust</span> <span>tokio</span> <span>rustls</span></span>
 
 ### jackhenry.io
-repo: https://github.com/jackhenry/jackhenry.github.io<br>
-demo: www.jackhenry.io
+_repo_: github.com/jackhenry/jackhenry.github.io
 
-description: My personal website. Purposefully built with vanilla javascript and to be bundled with no external dependencies. The repo contains node scripts for converting markdown files into html.
+_demo_: jackhenry.io
 
-tools: javascript webpack node handlebars
+_description_: My personal website. Purposefully built with vanilla javascript and to be bundled with no external dependencies. The repo contains node scripts for converting markdown files into html.
+
+_tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <span>node</span> <span>handlebars</span></span>
 
 
 ## Work Experience
-### _Security and Compliance Analyst_ (Jul 2018 - Feb 2019)
-Assurant INC, Woodbury MN 
+### Security and Compliance Analyst
+<span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Jul 2018 - Feb 2019</span>
+<span class="flex-align-center"><span class="material-icons mr-4">place</span>Assurant INC, Woodbury MN</span>
 
 - Developed SQL queries and scripts to retrieve user access information for databases, active directory, and internal applications.
 - Automated data preprocessing procedures with python and powershell.
@@ -54,8 +75,9 @@ Assurant INC, Woodbury MN
 - Introduced new internal naming standards and file organization standards.
 - Assisted with internal and external audit requests by acting as a liason between auditors and system administrators.
 
-### _Technical Specialist_ (Sep 2016 - Jun 2018)
-Computer Whatever, Anoka MN
+### Technical Specialist
+<span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Sep 2016 - Jun 2018</span>
+<span class="flex-align-center"><span class="material-icons mr-4">place</span>Computer Whatever, Anoka MN</span>
 
 - Configured and supported IMAP, POP3, and hosted Exchange accounts.
 - Provided support for common software packages likes Microsoft Office and Quickbooks.
@@ -63,26 +85,106 @@ Computer Whatever, Anoka MN
 - Implemented a new and more efficient backup procedure for client devices.
 - Utilized ticketing platform to document technical solutions.
 
-### _Sales and Support Associate_ (Mar 2015 - Oct 2015)
-Central Computer, San Mateo CA
+### Sales and Support Associate
+<span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Mar 2015 - Oct 2015</span>
+<span class="flex-align-center"><span class="material-icons mr-4">place</span>Central Computer, San Mateo CA</span>
 
 - Provided first line of technical support for clients.
 - Assisted in basic troubleshooting of client devices.
 - Documented and created support tickets for elevated issues.
 - Responded to technical inquiries from propsective clients.
 
+<script>
+  document.write('<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">');
+  //document.getElementById('jack-henry-erickson-vanoss').innerHTML = 'Jack Henry';
+  const secretMode = () => {
+    const head  = document.getElementsByTagName('head')[0];
+    const link  = document.createElement('link');
+    link.id   = 'secret';
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = '../assets/css/resume.css';
+    link.media = 'all';
+    head.appendChild(link);
+    document.getElementById('head').remove();
+    document.getElementById('subhead').remove();
+    document.getElementById('jack-henry-erickson-vanoss').innerHTML = 'Jack Henry Erickson-Vanoss';
+  }
+
+  let clickCount = 0;
+  let secretModeEnabled = false;
+  document.getElementById('jack-henry-erickson-vanoss').addEventListener('click', () => {
+    clickCount += 1;
+    if (clickCount === 3 && !secretModeEnabled) {
+      secretModeEnabled = !secretModeEnabled;
+      secretMode();
+    }
+  })
+</script>
+
 <style>
-  h3 {
-    border-bottom: 0px;
+  h1, h3 {
+    border-bottom: 0px !important;
   }
   p {
     margin-bottom: 0px;
     margin-top: 0px;
   }
+  ul {
+    list-style-type: none;
+  }
+  li:before {
+    font-family: 'Material Icons';
+    content: 'navigate_next';
+    vertical-align: -7%;
+  }
+  em {
+    padding-left: 0px;
+    text-decoration: underline;
+    color: var(--link-hover-color);
+  }
   #as {
     margin-top: 8px;
   }
+  .tools-list > span:nth-child(odd) {
+    color: var(--secondary-fg-color);
+  }
   #arna {
     margin-top: 0px;
+  }
+  #security-and-compliance-analyst {
+    margin-top: 0px;
+  }
+  #technical-specialist {
+    margin-top: 0px;
+  }
+  #sales-and-support-associate {
+    margin-top: 0px;
+  }
+  em {
+    background-color: unset !important;
+  }
+  .material-icons {
+    font-size: 14px;
+  }
+  .education-flex {
+    display: flex;
+    align-items: center;
+  }
+  .flex-align-center {
+    display: flex;
+    align-items: center;
+  }
+  .mr-4 {
+    margin-right: 4px;
+  }
+  #school-icon {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-right: 8px;
+    place-self: start;
+  }
+  #jack-henry-erickson-vanoss {
+    margin-bottom: 2px;
   }
 </style>

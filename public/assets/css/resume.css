@@ -1,0 +1,55 @@
+@import url('shared.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+html {
+  border-top: 0px;
+}
+
+html, body {
+  background-color: rgb(255,255,255);
+  color: var(--main-bg-color);
+}
+
+body {
+  max-width: 52rem;
+  font-family: 'Source Serif Pro', 'serif';
+  font-weight: 500;
+}
+
+h1 {
+  border-bottom: 0px;
+}
+h2 {
+  border-bottom: 1px solid rgba(var(--main-bg-values), 0.2);
+}
+h3 {
+  border-bottom: 0px;
+}
+
+em {
+  padding-left: 0px;
+  text-decoration: underline;
+  color: var(--main-bg-color) !important;
+}
+
+footer {
+  display: none;
+}
+
+#content {
+  padding-top: 0px;
+}
+
+#jack-henry-erickson-vanoss {
+  margin-top: 0px;
+}
+
+#security-and-compliance-analyst {
+  margin-bottom: 0px;
+}
+#technical-specialist {
+  margin-bottom: 0px;
+}
+#sales-and-support-associate {
+  margin-bottom: 0px;
+}
