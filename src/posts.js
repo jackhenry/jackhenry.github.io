@@ -25,12 +25,5 @@ export default [
             title: 'cirriculum vitae',
             path: './posts/cv.html',
             pin: true,
-        },{
-            fdate: '2019-08-11',
-            date: 'Sun Aug 11 2019 13:45:30 GMT+0000 (Coordinated Universal Time)',
-            author: 'Jack Henry',
-            title: 'Test Markdown Document',
-            path: './posts/test.html',
-            pin: false,
         }
     ]
