@@ -15,7 +15,7 @@ export default [
             fdate: '2022-03-20',
             date: 'Sun Mar 20 2022 00:17:44 GMT+0000 (Coordinated Universal Time)',
             author: 'мырзам',
-            title: 'менің күнім',
+            title: 'ГҮЛ',
             path: './posts/arna.html',
             pin: false,
         },{
