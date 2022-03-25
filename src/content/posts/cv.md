@@ -73,7 +73,7 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
 - Automated data preprocessing procedures with python and powershell.
 - Documented and escalated security or compliance issues related to user access.
 - Introduced new internal naming standards and file organization standards.
-- Assisted with internal and external audit requests by acting as a liason between auditors and system administrators.
+- Assisted with internal and external audit requests by acting as a liaison between auditors and system administrators.
 
 ### Technical Specialist
 <span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Sep 2016 - Jun 2018</span>
@@ -92,7 +92,7 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
 - Provided first line of technical support for clients.
 - Assisted in basic troubleshooting of client devices.
 - Documented and created support tickets for elevated issues.
-- Responded to technical inquiries from propsective clients.
+- Responded to technical inquiries from prospective clients.
 
 <script>
   document.write('<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">');
