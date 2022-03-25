@@ -8,6 +8,15 @@ projects:
       A monorepo containing packages for generating,
       modifying, and rendering force directed graphs.
       Includes a custom DSL.
+
+  - name: Unnamed Kazakh TTS
+    repo: ''
+    inProgress: true
+    tools: [python, pytorch, flask, node, nestjs]
+    description: >
+      A text to speech (TTS) service for the Kazakh language.
+      The model used for speech synthesis is based of new research from Nazarbeyev University.
+      Will include a RESTful API supporting webhooks.
   
   - name: rustntp
     repo: https://github.com/jackhenry/rustntp.git

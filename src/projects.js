@@ -34,6 +34,34 @@ export default [
   <div id="project-entry-line">
     <span id="label">name:</span>
     <span>
+      Unnamed Kazakh TTS 
+    </span>
+      <span id="in-progress">in progress</span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">urls:</span>
+    <span class="multiple-links">
+      <a href=>repo</a>
+    </span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">description:</span>
+    <span>A text to speech (TTS) service for the Kazakh language. The model used for speech synthesis is based of new research from Nazarbeyev University. Will include a RESTful API supporting webhooks.
+</span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">tools:</span>
+      <span class="tool-name">python</span>
+      <span class="tool-name">pytorch</span>
+      <span class="tool-name">flask</span>
+      <span class="tool-name">node</span>
+      <span class="tool-name">nestjs</span>
+  </div>
+</div>`,
+`<div id="project-entry">
+  <div id="project-entry-line">
+    <span id="label">name:</span>
+    <span>
       rustntp 
     </span>
       <span id="in-progress">in progress</span>
