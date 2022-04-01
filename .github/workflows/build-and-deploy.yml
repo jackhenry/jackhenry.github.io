@@ -10,9 +10,9 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci
-          npm run generate
-          npm run build
+          yarn intall --frozen-lockfile
+          yarn generate
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
