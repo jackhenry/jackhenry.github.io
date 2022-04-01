@@ -1,4 +1,5 @@
 ./docs
 ./public
-./src/posts
+./src/posts.js
+./src/projects.js
 generate.js
