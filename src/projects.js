@@ -77,7 +77,7 @@ export default [
   </div>
   <div id="project-entry-line">
     <span id="label">description:</span>
-    <span>A text to speech (TTS) service for the Kazakh language. The model used for speech synthesis is based of new research from Nazarbeyev University. Will include a RESTful API supporting webhooks.
+    <span>A text to speech (TTS) service for the Kazakh language. The model used for speech synthesis is based off of new research from Nazarbeyev University. Will include a RESTful API supporting webhooks.
 </span>
   </div>
   <div id="project-entry-line">
