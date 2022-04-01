@@ -10,7 +10,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn intall --frozen-lockfile
+          yarn install --frozen-lockfile
           yarn generate
           yarn build
 
