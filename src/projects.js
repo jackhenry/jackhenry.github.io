@@ -34,6 +34,37 @@ export default [
   <div id="project-entry-line">
     <span id="label">name:</span>
     <span>
+      babel-as-a-service (baas) 
+    </span>
+      <span id="in-progress">in progress</span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">urls:</span>
+    <span class="multiple-links">
+      <a href=https://github.com/jackhenry/babel-aas.git>repo</a>
+        <a href=https://www.jackhenry.io/babel-aas>demo</a>
+    </span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">description:</span>
+    <span>Service that provides babel transpilations through a REST api.  API services are run within a kubernetes cluster which is hosted on Google Cloud Platform
+</span>
+  </div>
+  <div id="project-entry-line">
+    <span id="label">tools:</span>
+      <span class="tool-name">typescript</span>
+      <span class="tool-name">webpack</span>
+      <span class="tool-name">python</span>
+      <span class="tool-name">fastapi</span>
+      <span class="tool-name">kubernetes</span>
+      <span class="tool-name">express</span>
+      <span class="tool-name">react</span>
+  </div>
+</div>`,
+`<div id="project-entry">
+  <div id="project-entry-line">
+    <span id="label">name:</span>
+    <span>
       Unnamed Kazakh TTS 
     </span>
       <span id="in-progress">in progress</span>

@@ -46,6 +46,15 @@ Includes an implementation of a custom DSL for defining graphs.
 
 _tools_: <span class="tools-list"><span>typescript</span> <span>svelte+vite</span> <span>chevrotain</span> <span>konvajs</span> <span>tailwindcss</span></span>
 
+### babel-as-a-service (baas)
+_repo_: www.github.com/jackhenry/babel-aas
+
+_demo_: www.jackhenry.io/babel-aas
+
+_description_: A service that provides babel transpilations through a REST api. The project monorepo contains several packages. It includes two microservices which process client API requests and complete the transpilation. These services run as pods in a kubernetes cluster which is hosted on the Google Cloud Platform. Additionally, the monorepo contains a custom webpack plugin and an interactive demo written in React.
+
+_tools_: <span class="tools-list"><span>python</span> <span>kubernetes</span> <span>FastAPI</span> <span>typescript</span> <span>webpack</span> <span>react</span> <span>express</span></span>
+
 ### rustntp
 _repo_: www.github.com/jackhenry/rustntp
 

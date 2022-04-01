@@ -9,6 +9,15 @@ projects:
       modifying, and rendering force directed graphs.
       Includes a custom DSL.
 
+  - name: babel-as-a-service (baas)
+    repo: https://github.com/jackhenry/babel-aas.git
+    demo: https://www.jackhenry.io/babel-aas
+    inProgress: true
+    tools: [typescript, webpack, python, fastapi, kubernetes, express, react]
+    description: > 
+      Service that provides babel transpilations through a REST api. 
+      API services are run within a kubernetes cluster which is hosted on Google Cloud Platform
+
   - name: Unnamed Kazakh TTS
     repo: ''
     inProgress: true
