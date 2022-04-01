@@ -7,8 +7,7 @@
     "author": "Jack Henry",
     "license": "MIT",
     "scripts": {
-        "docs": "rm -r ./docs && cp -r ./public ./docs",
-        "build": "webpack --config webpack.config.js --mode production && yarn docs",
+        "build": "webpack --config webpack.config.js --mode production",
         "generate": "node generate.js",
         "webpack:dev": "yarn generate && webpack serve --mode development",
         "dev": "nodemon --config nodemon.json --exec \"yarn webpack:dev\""
