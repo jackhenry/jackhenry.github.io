@@ -1,0 +1,100 @@
+:root {
+  --main-fg-values: 201, 202, 204;
+  --main-bg-values: 29, 31, 33;
+  --main-bg-color: rgb(var(--main-bg-values));
+  --main-fg-color: rgb(var(--main-fg-values));
+  --secondary-fg-color: rgb(43, 188, 138);
+  --code-bg-color: rgb(41, 42, 45);
+  --link-hover-values: 212, 128, 170;
+  --link-hover-color: rgb(var(--link-hover-values));
+  --error-color: var(--link-hover-color);
+  --fg-muted: #666;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    border-top: 2px solid var(--secondary-fg-color);
+}
+
+body {
+    max-width: 48rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    line-height: 1.725;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+}
+
+a {
+  color: var(--main-fg-color);
+  text-decoration: none;
+  background-image: linear-gradient(transparent, transparent 5px, var(--main-fg-color) 5px, var(--main-fg-color));
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+  cursor: pointer;
+}
+
+a:hover {
+  background-image: linear-gradient(transparent, transparent 4px, var(--link-hover-color) 4px, var(--link-hover-color));
+}
+
+em {
+  font-weight: 700;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 2px;
+}
+
+#content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-wrap: break-word;
+  padding-top: 4rem;
+}
+
+footer {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 48rem;
+  margin-top: 1.5rem;
+  color: var(--fg-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 640px) {
+  footer {
+      align-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
+  }
+  footer>span {
+      margin-top: 4px;
+      text-align: unset;
+  }
+}
+
+#copyright {
+  align-self: flex-start;
+  text-align: center;
+}
+
+#final-message {
+  margin-top: 4px;
+  align-self: flex-end;
+  text-align: center;
+}
