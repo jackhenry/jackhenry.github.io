@@ -42,7 +42,7 @@ _repo_: www.github.com/jackhenry/arna
 _demo_: www.jackhenry.io/arna
 
 _description_: A monorepo containing various packages for generating, modifying, and rendering force directed graphs.
-Includes an implementation of a custom DSL for defining graphs.
+Includes an implementation of a custom domain specific language for defining graphs. Additionally, there is an interactive demo included in the repository which was written with svelte.
 
 _tools_: <span class="tools-list"><span>typescript</span> <span>svelte+vite</span> <span>chevrotain</span> <span>konvajs</span> <span>tailwindcss</span></span>
 
@@ -51,9 +51,9 @@ _repo_: www.github.com/jackhenry/babel-aas
 
 _demo_: www.jackhenry.io/babel-aas
 
-_description_: A service that provides babel transpilations through a REST api. The project monorepo contains several packages. It includes two microservices which process client API requests and complete the transpilation. These services run as pods in a kubernetes cluster which is hosted on the Google Cloud Platform. Additionally, the monorepo contains a custom webpack plugin and an interactive demo written in React.
+_description_: A service that provides babel transpilations through a REST api. The project monorepo contains several packages. It includes two microservices. The first service completes the actual babel transpilations. The second service is publicly exposed processes client API requests. These services run as pods in a kubernetes cluster which is hosted on the Google Cloud Platform. Additionally, the monorepo contains a custom webpack plugin and an interactive demo written in React.
 
-_tools_: <span class="tools-list"><span>python</span> <span>kubernetes</span> <span>FastAPI</span> <span>typescript</span> <span>webpack</span> <span>react</span> <span>express</span></span>
+_tools_: <span class="tools-list"><span>python</span> <span>kubernetes</span> <span>FastAPI</span> <span>typescript</span> <span>webpack</span> <span>react</span> <span>express</span> <span>redux</span></span>
 
 ### rustntp
 _repo_: www.github.com/jackhenry/rustntp
@@ -78,9 +78,10 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
 <span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Jul 2018 - Feb 2019</span>
 <span class="flex-align-center"><span class="material-icons mr-4">place</span>Assurant INC, Woodbury MN</span>
 
-- Developed SQL queries and scripts to retrieve user access information for databases, active directory, and internal applications.
-- Automated data preprocessing procedures with python and powershell.
+- Developed SQL queries and python scripts to retrieve user access information for database management systems, active directory domains, and other internal applications.
+- Automated internal procedures with python and powershell. For example, generation of team progress reports were completely automated using python.
 - Documented and escalated security or compliance issues related to user access.
+- Created and revised documentation for internal services and applications.
 - Introduced new internal naming standards and file organization standards.
 - Assisted with internal and external audit requests by acting as a liaison between auditors and system administrators.
 
@@ -91,7 +92,7 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
 - Configured and supported IMAP, POP3, and hosted Exchange accounts.
 - Provided support for common software packages likes Microsoft Office and Quickbooks.
 - Repaired and replaced hardware components in laptops, desktops, and servers.
-- Implemented a new and more efficient backup procedure for client devices.
+- Replaced an inefficient backup procedure for client devices. The new procedure utilized Ubuntu Server to store and manage images using SFTP.
 - Utilized ticketing platform to document technical solutions.
 
 ### Sales and Support Associate
