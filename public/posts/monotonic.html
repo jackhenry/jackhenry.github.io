@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150376393-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-150376393-1');
+    </script>
+    <title>Nondecreasing Monotonous Integers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/post.css" />
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/ir-black.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</head>
+
+<body>
+    <script>
+        0
+    </script>
+    <div id="content">
+        <div id="head">
+            <span id="title">Nondecreasing Monotonous Integers</span>
+            <a href="/" id="home-redirect">$HOME</a>
+        </div>
+        <div id="subhead">
+            <span id="author">Jack Henry</span>
+            <span id="date">2022-04-04</span>
+        </div>
+        <div id="markdown-container">
+            <p>I&#39;ve been involved in a fair amount of technical interviews lately. I&#39;ve been asked a plethora of various problems. Most of them are straightforward. </p>
+<p>However, I recently encountered the same problem during two separate interviews for two separate companies.</p>
+<p>The problem has an interesting solution. I struggled with the question the first time I encountered it. Therefore, I thought it might be valuable for myself and others if try to outline the problem along with a couple of solutions.</p>
+<h1 id="the-problem">The Problem</h1>
+<p>Given an integer <code>N</code>, determine the largest <em>nondecreasing monotonous integer</em> <code>y</code> where <code>y &lt;= N</code></p>
+<h1 id="background">Background</h1>
+<p>The keyword is <em>monotonous</em>. What does a <em>nondecreasing monotonous</em> integer entail? </p>
+<p>In mathematics, there exists the <em>monotonic</em> function. Quickly looking at wolfram alpha, we see the following definition:</p>
+<blockquote>
+<p>&quot;A monotonic function ... is either entirely nonincreasing or nondecreasing. A function is monotonic if its first derivative (which need not be continuous) does not change sign.&quot;</p>
+</blockquote>
+<p>In other words, if the function <code>f(x)</code> is monotonically nondecreasing, the value <code>f(A)</code> will be always be less than or equal to <code>f(B)</code> if <code>A &lt; B</code>. </p>
+<p><em>Note: <a href="https://en.wikipedia.org/wiki/Monotonic_function#In_calculus_and_analysis">A formal explanation can be found on wikipedia.</a></em></p>
+<p>A simple example of an <em>nondecreasing monotonous</em> function would be <code>f(x) = x</code> or any other linear function with a positive coefficient in front of <code>x</code>.</p>
+<p>A <em>nondecreasing monotonous integer</em> follows the same spirit as a nondecreasing monotonous function. The following are examples of such integers:</p>
+<ul>
+<li>123456789</li>
+<li>12</li>
+<li>2</li>
+<li>1111111</li>
+<li>02233467</li>
+<li>3445</li>
+</ul>
+<p>Each digit in the integer is less than or equal to its successor. (left to right)</p>
+<h1 id="two-approaches">Two Approaches</h1>
+<h3 id="the-time-inefficient-approach">The Time Inefficient Approach</h3>
+<p>The simplest and most straightforward approach to this problem would be to write some sort of algorithm that brute forces a solution.</p>
+<p>For example:</p>
+<pre><code>N = 987654321 // Upper bound for solution
+solution = 0; // Variable which will hold the solution
+
+for (i = 0; i &lt;= N; i++) { 
+  // Flag used to mark a possible solution as nondecreasing
+  nondecreasing = True 
+  for (j = 0; j &lt; i - 1; j++) {
+    // If the digit at index j is greater than digit at index j + 1,
+    // the candidate cannot be nondecreasing
+    if (N[j] &gt; N[j + 1]) nondecreasing = False
+  }
+  // if nondecreasing hasn&#39;t been set to false, assign solution to i
+  if (nondecreasing) solution = i 
+}
+
+print &quot;Highest nondecreasing monotonous integer is &quot; + solution
+</code></pre>
+<p>This approach works but it is inefficient. </p>
+<p>There are two loops and one is nested within the other. The time complexity of the outer loop is <code>Θ(N)</code>. The time complexity of the inner loop is <code>Θ(i)</code>. </p>
+<p>To extrapolate the time complexity of the entire algorithm, we multiple <code>Θ(N)</code> and <code>Θ(i)</code>. This results in <code>Θ(Ni)</code> or roughly <code>Θ(N²)</code> since the upper bound of <code>i</code> increases as <code>N</code> increases.</p>
+<p>Ultimately, this approach to the problem is not what an interviewer wants to see.</p>
+<p><em>Note: I deliberately use Big-Θ notation instead of Big-O here. This is because both of the loop&#39;s time complexities are bounded by N. I feel this is an important distinction when analyzing time complexities of algorithms.</em></p>
+<h3 id="the-time-efficient-approach">The Time Efficient Approach</h3>
+<p>First off, it&#39;s important to observe that a nondecreasing monotonous integer can be subdivided into integer pairs. The first integer of each pair is less than or equal to the second integer.</p>
+<p>For example, here is <code>1234</code> subdivided into 3 integer pairs.</p>
+<pre><code>(1, 2), (2, 3), (3, 4) &lt;-&gt; 1234
+</code></pre>
+<p>With an integer that doesn&#39;t satisfy the requirements of nondecreasing monotonicity, we would get one or more integer pairs where the first integer is greater than the second.</p>
+<p>For example, here is <code>4356</code> subdivided into 3 integer pairs. Notice that the pair <code>(4, 3)</code> is decreasing.</p>
+<pre><code>(4, 3), (3, 5), (5, 6) &lt;-&gt; 4356
+</code></pre>
+<p>In order to transform a non-monotonous integer into a nondecreasing monotonous integer, we must decrement the first integer of every decreasing pair. </p>
+<p><em>This must be done in order from the right most pair to the left most pair.</em> If an integer is decremented, the second value in the next integer pair must be updated.</p>
+<p>For <code>4356</code>, it is only necessary to perform the decrement operation on the first integer pair.</p>
+<pre><code>(4, 3) -&gt; (3, 3)
+</code></pre>
+<p>After completing this first step in which decreasing pairs are decremented, we are left with the following integer:</p>
+<pre><code>3356 &lt;-&gt; (3, 3), (3, 5), (5, 6)
+</code></pre>
+<p>Now, starting with the integer on the right of the last decremented integer, we assign the remaining integers, moving to the right, to the value of <code>9</code></p>
+<pre><code>3356 -&gt; 3999
+</code></pre>
+<p>In this example, the first <code>3</code> was decremented last. Therefore, starting with the second digit, also <code>3</code>, we assign each digit to <code>9</code>. This leaves us with <code>3999</code> which is the solution to the problem when <code>N = 4356</code>.</p>
+<p>Here is another example that requires multiple decrement operations:</p>
+<pre><code>N = 4764
+
+// subdivide into pairs
+(4, 7), (7, 6), (6, 4)
+
+// starting from the right, we notice (6, 4) is decreasing
+(4, 7), (7, 5), (5, 4) &lt;-&gt; 4754
+
+// then, we notice (7, 5) is decreasing
+(4, 6), (6, 5), (5, 4) &lt;-&gt; 4654
+
+// starting with 6, assign remaining values to 9
+(4, 6), (6, 9), (9, 9) &lt;-&gt; 4699
+
+When N = 4764, the solution is 4699
+</code></pre>
+<p>Those two steps construct the approach to finding the largest nondecreasing monotonous integer which is less than or equal to <code>N</code>. </p>
+<p>Now, let&#39;s see it implemented in code. For my implementation, I chose to convert <code>N</code> into an array of ascii codes. This simplifies traversal and mutation of individual digits.</p>
+<pre><code class="language-ts">const N = 4764
+// Convert the number into an array of one character strings
+const strNumber = `${N}`.split(&#39;&#39;);
+// Get the array of ascii codes
+const s = strNumber.map((t) =&gt; t.charCodeAt(0)); 
+// Number of digits in N
+const n = s.length; 
+
+// Marker used to track index of last decremented integer
+let marker = n;
+// From right to left, check for decreasing pairs
+for (let i = n - 1; i &gt; 0; --i) {
+  // If true, a decreasing pair was found
+  if (s[i] &lt; s[i - 1]) {
+    // decrement the first integer in the pair
+    --s[i - 1];
+    // update marker
+    marker = i;
+  }
+}
+
+// The integer at s[marker] is the integer immediately to the right
+// of the last decremented integer. Starting from the marker index,
+// assign remaining digits to 9
+for (let i = marker; i &lt; n; ++i) {
+  s[i] = &#39;9&#39;.charCodeAt(0);
+}
+
+// Convert the array of ascii codes back to an integer
+const largest = +String.fromCharCode(...s);
+console.log(`Largest nondecreasing monotonous integer: ${largest}`);
+</code></pre>
+<p>With this algorithm, there are two loops where the majority of operations occur. The first loop has a time complexity of <code>Θ(n)</code> where <code>n</code> is the number of digits in <code>N</code>.</p>
+<p>Similarly, the second loop also has a time complexity of <code>Θ(n)</code>.</p>
+<p>Since the two loops are not nested, we simply add the time complexities of each loop to receive the overall time complexity of this algorithm. The result is <code>Θ(2n)</code> or simply <code>Θ(n)</code>.</p>
+<p>I doubt there is a solution to this problem which would only require constant time complexity. Therefore, this algorithm is as time efficient as any other optimal solution.</p>
+<p><em>Note: Again, I deliberately used Big-Θ notation here.</em></p>
+
+        </div>
+        <footer>
+            <span id="copyright">copyright &copy 2022 Jack Henry (мырзам)</span>
+            <span id="final-message">From viewers like you. Thank you.</span>
+        </footer>
+    </div>
+</body>
+
+</html>
