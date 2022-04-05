@@ -9,7 +9,7 @@ I've been involved in a fair amount of technical interviews lately. I've been as
 
 However, I recently encountered the same problem during two separate interviews for two separate companies.
 
-The problem has an interesting solution. I struggled with the question the first time I encountered it. Therefore, I thought it might be valuable for myself and others if try to outline the problem along with a couple of solutions.
+The problem has an interesting solution which I struggled to discover at first. Therefore, I thought it might be valuable for myself and others if I try to outline the problem along with a solution.
 
 The Problem
 ====
@@ -30,7 +30,7 @@ In other words, if the function `f(x)` is monotonically nondecreasing, the value
 
 A simple example of an *nondecreasing monotonous* function would be `f(x) = x` or any other linear function with a positive coefficient in front of `x`.
 
-A *nondecreasing monotonous integer* follows the same spirit as a nondecreasing monotonous function. The following are examples of such integers:
+A *nondecreasing monotonous integer* follows the same spirit as a nondecreasing monotonic function. The following are examples of such integers:
 
 
 - 123456789
@@ -48,7 +48,7 @@ Two Approaches
 
 ### The Time Inefficient Approach
 
-The simplest and most straightforward approach to this problem would be to write some sort of algorithm that brute forces a solution.
+The simplest and most straightforward approach to this problem would be to write some sort of algorithm that solves through brute force.
 
 For example:
 
@@ -77,7 +77,7 @@ There are two loops and one is nested within the other. The time complexity of t
 
 To extrapolate the time complexity of the entire algorithm, we multiple `Θ(N)` and `Θ(i)`. This results in `Θ(Ni)` or roughly `Θ(N²)` since the upper bound of `i` increases as `N` increases.
 
-Ultimately, this approach to the problem is not what an interviewer wants to see.
+Ultimately, this approach to the problem is probably not what an interviewer wants to see. Brute force is rarely elegant.
 
 *Note: I deliberately use Big-Θ notation instead of Big-O here. This is because both of the loop's time complexities are bounded by N. I feel this is an important distinction when analyzing time complexities of algorithms.*
 
@@ -102,7 +102,7 @@ For example, here is `4356` subdivided into 3 integer pairs. Notice that the pai
 In order to transform a non-monotonous integer into a nondecreasing monotonous integer, we must decrement the first integer of every decreasing pair. 
 
 
-*This must be done in order from the right most pair to the left most pair.* If an integer is decremented, the second value in the next integer pair must be updated.
+*This must be done in order from the right most pair to the left most pair.* If an integer is decremented, the second value in the next integer pair must be updated to reflect this change.
 
 For `4356`, it is only necessary to perform the decrement operation on the first integer pair.
 
@@ -188,7 +188,7 @@ Similarly, the second loop also has a time complexity of `Θ(n)`.
 
 Since the two loops are not nested, we simply add the time complexities of each loop to receive the overall time complexity of this algorithm. The result is `Θ(2n)` or simply `Θ(n)`.
 
-I doubt there is a solution to this problem which would only require constant time complexity. Therefore, this algorithm is as time efficient as any other optimal solution.
+I doubt there is a solution to this problem which would only require constant time. Therefore, this algorithm is as time efficient as any other optimal solution.
 
 *Note: Again, I deliberately used Big-Θ notation here.*
 

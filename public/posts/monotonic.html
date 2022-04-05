@@ -37,7 +37,7 @@
         <div id="markdown-container">
             <p>I&#39;ve been involved in a fair amount of technical interviews lately. I&#39;ve been asked a plethora of various problems. Most of them are straightforward. </p>
 <p>However, I recently encountered the same problem during two separate interviews for two separate companies.</p>
-<p>The problem has an interesting solution. I struggled with the question the first time I encountered it. Therefore, I thought it might be valuable for myself and others if try to outline the problem along with a couple of solutions.</p>
+<p>The problem has an interesting solution which I struggled to discover at first. Therefore, I thought it might be valuable for myself and others if I try to outline the problem along with a solution.</p>
 <h1 id="the-problem">The Problem</h1>
 <p>Given an integer <code>N</code>, determine the largest <em>nondecreasing monotonous integer</em> <code>y</code> where <code>y &lt;= N</code></p>
 <h1 id="background">Background</h1>
@@ -49,7 +49,7 @@
 <p>In other words, if the function <code>f(x)</code> is monotonically nondecreasing, the value <code>f(A)</code> will be always be less than or equal to <code>f(B)</code> if <code>A &lt; B</code>. </p>
 <p><em>Note: <a href="https://en.wikipedia.org/wiki/Monotonic_function#In_calculus_and_analysis">A formal explanation can be found on wikipedia.</a></em></p>
 <p>A simple example of an <em>nondecreasing monotonous</em> function would be <code>f(x) = x</code> or any other linear function with a positive coefficient in front of <code>x</code>.</p>
-<p>A <em>nondecreasing monotonous integer</em> follows the same spirit as a nondecreasing monotonous function. The following are examples of such integers:</p>
+<p>A <em>nondecreasing monotonous integer</em> follows the same spirit as a nondecreasing monotonic function. The following are examples of such integers:</p>
 <ul>
 <li>123456789</li>
 <li>12</li>
@@ -61,7 +61,7 @@
 <p>Each digit in the integer is less than or equal to its successor. (left to right)</p>
 <h1 id="two-approaches">Two Approaches</h1>
 <h3 id="the-time-inefficient-approach">The Time Inefficient Approach</h3>
-<p>The simplest and most straightforward approach to this problem would be to write some sort of algorithm that brute forces a solution.</p>
+<p>The simplest and most straightforward approach to this problem would be to write some sort of algorithm that solves through brute force.</p>
 <p>For example:</p>
 <pre><code>N = 987654321 // Upper bound for solution
 solution = 0; // Variable which will hold the solution
@@ -83,7 +83,7 @@ print &quot;Highest nondecreasing monotonous integer is &quot; + solution
 <p>This approach works but it is inefficient. </p>
 <p>There are two loops and one is nested within the other. The time complexity of the outer loop is <code>Θ(N)</code>. The time complexity of the inner loop is <code>Θ(i)</code>. </p>
 <p>To extrapolate the time complexity of the entire algorithm, we multiple <code>Θ(N)</code> and <code>Θ(i)</code>. This results in <code>Θ(Ni)</code> or roughly <code>Θ(N²)</code> since the upper bound of <code>i</code> increases as <code>N</code> increases.</p>
-<p>Ultimately, this approach to the problem is not what an interviewer wants to see.</p>
+<p>Ultimately, this approach to the problem is probably not what an interviewer wants to see. Brute force is rarely elegant.</p>
 <p><em>Note: I deliberately use Big-Θ notation instead of Big-O here. This is because both of the loop&#39;s time complexities are bounded by N. I feel this is an important distinction when analyzing time complexities of algorithms.</em></p>
 <h3 id="the-time-efficient-approach">The Time Efficient Approach</h3>
 <p>First off, it&#39;s important to observe that a nondecreasing monotonous integer can be subdivided into integer pairs. The first integer of each pair is less than or equal to the second integer.</p>
@@ -95,7 +95,7 @@ print &quot;Highest nondecreasing monotonous integer is &quot; + solution
 <pre><code>(4, 3), (3, 5), (5, 6) &lt;-&gt; 4356
 </code></pre>
 <p>In order to transform a non-monotonous integer into a nondecreasing monotonous integer, we must decrement the first integer of every decreasing pair. </p>
-<p><em>This must be done in order from the right most pair to the left most pair.</em> If an integer is decremented, the second value in the next integer pair must be updated.</p>
+<p><em>This must be done in order from the right most pair to the left most pair.</em> If an integer is decremented, the second value in the next integer pair must be updated to reflect this change.</p>
 <p>For <code>4356</code>, it is only necessary to perform the decrement operation on the first integer pair.</p>
 <pre><code>(4, 3) -&gt; (3, 3)
 </code></pre>
@@ -160,7 +160,7 @@ console.log(`Largest nondecreasing monotonous integer: ${largest}`);
 <p>With this algorithm, there are two loops where the majority of operations occur. The first loop has a time complexity of <code>Θ(n)</code> where <code>n</code> is the number of digits in <code>N</code>.</p>
 <p>Similarly, the second loop also has a time complexity of <code>Θ(n)</code>.</p>
 <p>Since the two loops are not nested, we simply add the time complexities of each loop to receive the overall time complexity of this algorithm. The result is <code>Θ(2n)</code> or simply <code>Θ(n)</code>.</p>
-<p>I doubt there is a solution to this problem which would only require constant time complexity. Therefore, this algorithm is as time efficient as any other optimal solution.</p>
+<p>I doubt there is a solution to this problem which would only require constant time. Therefore, this algorithm is as time efficient as any other optimal solution.</p>
 <p><em>Note: Again, I deliberately used Big-Θ notation here.</em></p>
 
         </div>
