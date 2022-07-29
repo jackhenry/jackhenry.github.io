@@ -15,7 +15,7 @@ export default [
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/arna.git>repo</a>
-        <a href=https://www.jackhenry.io/arna>demo</a>
+        <a href=https://jackhenry.github.io/arna/>demo</a>
     </span>
   </div>
   <div id="project-entry-line">
@@ -42,7 +42,6 @@ export default [
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/babel-aas.git>repo</a>
-        <a href=https://www.jackhenry.io/babel-aas>demo</a>
     </span>
   </div>
   <div id="project-entry-line">
@@ -59,34 +58,6 @@ export default [
       <span class="tool-name">kubernetes</span>
       <span class="tool-name">express</span>
       <span class="tool-name">react</span>
-  </div>
-</div>`,
-`<div id="project-entry">
-  <div id="project-entry-line">
-    <span id="label">name:</span>
-    <span>
-      Unnamed Kazakh TTS 
-    </span>
-      <span id="in-progress">in progress</span>
-  </div>
-  <div id="project-entry-line">
-    <span id="label">urls:</span>
-    <span class="multiple-links">
-      <a href=>repo</a>
-    </span>
-  </div>
-  <div id="project-entry-line">
-    <span id="label">description:</span>
-    <span>A text to speech (TTS) service for the Kazakh language. The model used for speech synthesis is based off of new research from Nazarbeyev University. Will include a RESTful API supporting webhooks.
-</span>
-  </div>
-  <div id="project-entry-line">
-    <span id="label">tools:</span>
-      <span class="tool-name">python</span>
-      <span class="tool-name">pytorch</span>
-      <span class="tool-name">flask</span>
-      <span class="tool-name">node</span>
-      <span class="tool-name">nestjs</span>
   </div>
 </div>`,
 `<div id="project-entry">
@@ -151,7 +122,7 @@ export default [
     <span id="label">urls:</span>
     <span class="multiple-links">
       <a href=https://github.com/jackhenry/jackhenry.github.io.git>repo</a>
-        <a href=https://www.jackhenry.io/>demo</a>
+        <a href=https://www.jackerickson.net/>demo</a>
     </span>
   </div>
   <div id="project-entry-line">
