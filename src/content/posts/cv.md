@@ -94,7 +94,6 @@ Implementation of a Simple Network Time Protocol version 4 server and client.
       secretMode();
     }
   });
-  secretMode();
 </script>
 
 <style>
