@@ -7,102 +7,66 @@ pin: true
 ---
 
 # Jack Henry Erickson-Vanoss
-<div class="flex-align-center">
-  <span class="material-icons mr-4">email</span>
-  <span>jack@jackhenry.io</span>
-</div>
-<div class="flex-align-center">
-  <span class="material-icons mr-4">smartphone</span>
-  <span>999-999-9999</span>
-</div>
-<div class="flex-align-center">
-  <span class="material-icons mr-4">code</span>
-  <span>www.github.com/jackhenry</span>
-</div>
-<div class="flex-align-center">
-  <span class="material-icons mr-4">language</span>
-  <span>www.jackhenry.io</span>
+<div id="info" class="flex-align-center">
+  <div class="flex-align-center">
+    <span class="material-icons mr-4">email</span>
+    <span>jack@jackhenry.io</span>
+  </div>
+  <div class="flex-align-center">
+    <span class="material-icons mr-4">language</span>
+    <span>www.jackhenry.io</span>
+  </div>
+  <div class="flex-align-center">
+    <span class="material-icons mr-4">smartphone</span>
+    <span>+1 651 503 9531</span>
+  </div>
 </div>
 
 ## Education
 <div class="education-flex">
 <span id="school-icon" class="material-icons">navigate_next</span>
-B.S. Computer Science<br/>Metropolitan State University<br/>Graduated December 2021
+B.S. Computer Science (Dec. 2021)<br/>Metropolitan State University
 </div>
 
 <div id="as" class="education-flex">
 <span id="school-icon" class="material-icons">navigate_next</span>
-A.S. Computer Science<br/>Century College<br/>Graduated August 2020</p>
+A.S. Computer Science (Aug. 2020)<br/>Century College
 </div>
 
 ## Projects
-### arna
-_repo_: www.github.com/jackhenry/arna
+### arna graph
+A monorepo containing various packages for generating, modifying, and rendering force directed graphs.
 
-_demo_: www.jackhenry.io/arna
-
-_description_: A monorepo containing various packages for generating, modifying, and rendering force directed graphs.
-Includes an implementation of a custom domain specific language for defining graphs. Additionally, there is an interactive demo included in the repository which was written with svelte.
-
-_tools_: <span class="tools-list"><span>typescript</span> <span>svelte+vite</span> <span>chevrotain</span> <span>konvajs</span> <span>tailwindcss</span></span>
+<span class="tools-list"><span>typescript</span> <span>svelte</span> <span>vite</span> <span>chevrotain</span> <span>konvajs</span> <span>tailwindcss</span></span>
 
 ### babel-as-a-service (baas)
-_repo_: www.github.com/jackhenry/babel-aas
+A service that provides babel transpilations through a REST API.
 
-_demo_: www.jackhenry.io/babel-aas
-
-_description_: A service that provides babel transpilations through a REST api. The project monorepo contains several packages. It includes two microservices. The first service completes the actual babel transpilations. The second service is publicly exposed processes client API requests. These services run as pods in a kubernetes cluster which is hosted on the Google Cloud Platform. Additionally, the monorepo contains a custom webpack plugin and an interactive demo written in React.
-
-_tools_: <span class="tools-list"><span>python</span> <span>kubernetes</span> <span>FastAPI</span> <span>typescript</span> <span>webpack</span> <span>react</span> <span>express</span> <span>redux</span></span>
+<span class="tools-list"><span>python</span> <span>kubernetes</span> <span>FastAPI</span> <span>typescript</span> <span>webpack</span> <span>react</span> <span>express</span> <span>redux</span></span>
 
 ### rustntp
-_repo_: www.github.com/jackhenry/rustntp
+Implementation of a Simple Network Time Protocol version 4 server and client.
 
-_description_: Implementation of a Simple Network Time Protocol version 4 server and client in rust. The primary goal is to be
-compliant with RFC 4330.
-
-_tools_: <span class="tools-list"><span>rust</span> <span>tokio</span> <span>rustls</span></span>
-
-### jackhenry.io
-_repo_: www.github.com/jackhenry/jackhenry.github.io
-
-_demo_: www.jackhenry.io
-
-_description_: My personal website. Purposefully built with vanilla javascript and to be bundled with no external dependencies. The repo contains node scripts for converting markdown files into html.
-
-_tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <span>node</span> <span>handlebars</span></span>
-
+<span class="tools-list"><span>rust</span> <span>tokio</span> <span>rustls</span></span>
 
 ## Work Experience
-### Security and Compliance Analyst
+### Security and Compliance Analyst @ Assurant Inc., Woodbury MN
 <span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Jul 2018 - Feb 2019</span>
-<span class="flex-align-center"><span class="material-icons mr-4">place</span>Assurant INC, Woodbury MN</span>
 
-- Developed SQL queries and python scripts to retrieve user access information for database management systems, active directory domains, and other internal applications.
-- Automated internal procedures with python and powershell. For example, generation of team progress reports were completely automated using python.
-- Documented and escalated security or compliance issues related to user access.
+- Automated generation of user access reports with SQL, Python, and PowerShell.
+- Maintained and refactored internal scripts and tools.   
+- Worked with DBAs to expose data for reporting tools.
+- Documented and escalated security or compliance issues.
 - Created and revised documentation for internal services and applications.
-- Introduced new internal naming standards and file organization standards.
-- Assisted with internal and external audit requests by acting as a liaison between auditors and system administrators.
+- Introduced new naming and organizational standards.
 
-### Technical Specialist
+### Technical Specialist @ Computer Whatever, Anoka MN
 <span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Sep 2016 - Jun 2018</span>
-<span class="flex-align-center"><span class="material-icons mr-4">place</span>Computer Whatever, Anoka MN</span>
 
 - Configured and supported IMAP, POP3, and hosted Exchange accounts.
-- Provided support for common software packages likes Microsoft Office and Quickbooks.
-- Repaired and replaced hardware components in laptops, desktops, and servers.
-- Replaced an inefficient backup procedure for client devices. The new procedure utilized Ubuntu Server to store and manage images using SFTP.
-- Utilized ticketing platform to document technical solutions.
-
-### Sales and Support Associate
-<span class="flex-align-center"><span class="material-icons mr-4">calendar_today</span>Mar 2015 - Oct 2015</span>
-<span class="flex-align-center"><span class="material-icons mr-4">place</span>Central Computer, San Mateo CA</span>
-
-- Provided first line of technical support for clients.
-- Assisted in basic troubleshooting of client devices.
-- Documented and created support tickets for elevated issues.
-- Responded to technical inquiries from prospective clients.
+- Provided support for common software packages like Microsoft Office.
+- Implemented new backup procedure that was five times faster than previous method.
+- Documented technical solutions for internal and external use.
 
 <script>
   document.write('<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">');
@@ -129,7 +93,8 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
       secretModeEnabled = !secretModeEnabled;
       secretMode();
     }
-  })
+  });
+  secretMode();
 </script>
 
 <style>
@@ -155,6 +120,11 @@ _tools_: <span class="tools-list"><span>javascript</span> <span>webpack</span> <
   }
   #as {
     margin-top: 8px;
+  }
+  .tools-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
   .tools-list > span:nth-child(odd) {
     color: var(--secondary-fg-color);

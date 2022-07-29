@@ -36,20 +36,65 @@ footer {
   display: none;
 }
 
+#info {
+  justify-content: space-evenly;
+}
+
 #content {
   padding-top: 0px;
 }
 
 #jack-henry-erickson-vanoss {
   margin-top: 0px;
+  margin-bottom: 0px !important;
 }
 
-#security-and-compliance-analyst {
+#security-and-compliance-analyst--assurant-inc-woodbury-mn {
+  margin-top: 0px;
   margin-bottom: 0px;
 }
-#technical-specialist {
+#technical-specialist--computer-whatever-anoka-mn {
   margin-bottom: 0px;
 }
 #sales-and-support-associate {
   margin-bottom: 0px;
+}
+
+#education {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#projects {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#arna-graph {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#babel-as-a-service-baas{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#rustntp {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#work-experience {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#as {
+  margin-top: 0px !important;
 }
